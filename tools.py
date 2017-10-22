@@ -170,7 +170,7 @@ def accuracy(logits, labels):
         corret = tf.equal(tf.arg_max(logits, 1), tf.arg_max(labels, 1))
         corret = tf.cast(corret, tf.float32)
         acc = tf.reduce_mean(corret) * 100
-        tf.summary.scalar(scope + 'accuracy', acc)   
+       # tf.summary.scalar(scope + 'accuracy', acc)   
         return acc
         
     

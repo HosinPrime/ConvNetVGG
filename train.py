@@ -19,13 +19,13 @@ IMG_W = 224
 IMG_H = 224
 BATCH_SIZE = 32
 learning_rate = 0.01
-MAX_STEP = 15000   # it took me about one hour to complete the training.
+MAX_STEP = 15000   # 训练的最大步骤数，其数字为大概为total_data/batch_size*epoch左右
 IS_PRETRAIN = False
 CAPACITY = 1024
-train_path = 'F:\\pythonWorkplace\\ConNet\\data\\train'
-test_path = 'F:\\pythonWorkplace\\ConNet\\data\\validation'
-train_log_dir = 'F:\\pythonWorkplace\\ConNet\\logs\\train'
-test_log_dir = 'F:\\pythonWorkplace\\ConNet\\logs\\test'
+train_path = 'D:\\pythonWorkSpace\\ConvNetVGG\\data\\train'
+test_path = 'D:\\pythonWorkSpace\\ConvNetVGG\\data\\test'
+train_log_dir = 'D:\\pythonWorkSpace\\ConvNetVGG\\logs\\train'
+test_log_dir = 'D:\\pythonWorkSpace\\ConvNetVGG\\logs\\test'
 N_CLASS=2
 
 

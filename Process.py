@@ -11,15 +11,17 @@ import numpy as np
 import tensorflow as tf
 
 '''
-train_path = 'F:\\pythonWorkplace\\ConNet\\data\\train'
-test_path = 'F:\\pythonWorkplace\\ConNet\\data\\validation'
+train_path = 'D:\\pythonWorkSpace\\ConvNetVGG\\data\\train'
+test_path = 'D:\\pythonWorkSpace\\ConvNetVGG\\data\\test'
 
 
-IMAGE_W = 256
-IMAGE_H = 256
-BATCH_SIZE = 128
+IMAGE_W = 224
+IMAGE_H = 224
+BATCH_SIZE = 16
 CAPACITY = 1024
 '''
+
+
 
 
 def get_data(train_filePath, test_filePath):
@@ -147,21 +149,22 @@ def get_batch(image, label, image_W, image_H, batch_size, capacity):
 
 
 '''
-下面为测试图片导入是否成功的代码，需要使用时直接将注释去掉，运行这个文件就可以
+下面为测试图片导入是否成功的代码，需要使用时直接将注释去掉(并注释掉上面的图片标准化,和转为float的操作)，运行这个文件就可以
 '''
 
-'''
 
+'''
 import matplotlib.pyplot as plt
 
 BATCH_SIZE = 2
 CAPACITY = 256
-IMG_W = 208
-IMG_H = 208
+IMG_W = 224
+IMG_H = 224
 
-train_dir = 'F:\\pythonWorkplace\\ConNet\\data\\train'
+train_dir = 'D:\\pythonWorkSpace\\ConvNetVGG\\data\\train'
+test_dir = 'D:\\pythonWorkSpace\\ConvNetVGG\\data\\test'
 
-image_list, label_list = get_data(train_dir)
+image_list, label_list, test_list, test_label = get_data(train_dir,test_dir)
 image_batch, label_batch = get_batch(image_list, label_list, IMG_W, IMG_H, BATCH_SIZE, CAPACITY)
 
 with tf.Session() as sess:
@@ -186,5 +189,4 @@ with tf.Session() as sess:
     finally:
         coord.request_stop()
     coord.join(threads)
-
 '''
