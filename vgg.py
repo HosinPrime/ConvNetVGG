@@ -3,6 +3,13 @@ import tensorflow as tf
 import tools
 
 
+'''
+vgg16模型，用tools类构建完成
+'''
+
+
+
+
 def VGG16N(x, n_classes, is_pretrain=False):
     
     with tf.name_scope('VGG16'):
